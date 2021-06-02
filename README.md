@@ -1,2 +1,2 @@
 # FCC-practice
- Various files for practcing the FCC JS Course
+ Various files for practicing the FCC JS Course
