@@ -1,8 +1,17 @@
 function diffArray(arr1, arr2) {
     var newArr = [];
-    var joined = newArr.push(...arr1) + newArr.push(...arr2);
-    var sorted = joined.sort();
     
+    function onlyInFirst(first, second) {
+        for(let i = 0; i < first.length; i++) {
+            if (second.indexOf(first[i]) === -1) {
+                newArr.push(first[i]);
+            }
+        }
+    }
+    
+    onlyInFirst(arr1, arr2);
+    onlyInFirst(arr2, arr1);
+
     return newArr;
 }
   
