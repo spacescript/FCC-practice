@@ -1,7 +1,13 @@
 function translatePigLatin(str) {
+    var conson;
+    var regex = /[^aeiou]/;
 
+    var arr = str.split('');
 
-    return str;
+    while(arr[0] )
+
+    return arr;
 }
   
-translatePigLatin("consonant");
+var test = translatePigLatin("glove");
+console.log(test);
