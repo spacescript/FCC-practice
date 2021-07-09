@@ -1,12 +1,16 @@
 function translatePigLatin(str) {
-    var conson;
+    var conson = [];
     var regex = /[^aeiou]/;
 
-    var arr = str.split('');
+    var findConson = regex.exec(str);
+    // regex.exec(str)[0];
 
-    while(arr[0] )
+    while(findConson != null) {
+        var sliced = str.slice(0,1);
+        conson.push(sliced);
+    }
 
-    return arr;
+    return conson;
 }
   
 var test = translatePigLatin("glove");
