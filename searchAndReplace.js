@@ -2,7 +2,7 @@ function myReplace(str, before, after) {
     // var sentence = str.split(" ");
     var index = str.indexOf(before);
     if (str[index] === str[index].toUpperCase()) {
-        after = after.charAt(0).toUpperCase
+        after = after.charAt(0).toUpperCase()
         + after.slice(1);
     } else {
         after = after.charAt(0).toLowerCase()
