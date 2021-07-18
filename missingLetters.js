@@ -1,5 +1,13 @@
 function fearNotLetter(str) {
-    return str;
+    //indexOf the string
+    //map charCodeAt 's
+    //if loop to check for incremental increases
+    //draw fromCharCode of any missing increment
+
+    // return str.charCodeAt(3);
+    // return String.fromCharCode(100);
 }
   
-fearNotLetter("abce");
+var test = fearNotLetter("abce");
+
+console.log(test);
