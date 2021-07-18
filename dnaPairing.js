@@ -14,10 +14,9 @@ function pairElement(str) {
         }
     }
 
-    list.map()
+    return list.map(pairing);
 
-    return pairing(list[3]);
-
+    // return pairing(list[3]);
     // return str;
 }
 
