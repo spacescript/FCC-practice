@@ -6,9 +6,10 @@ function sumFibs(num) {
     };
 
     fibs = fibs.filter(digi => digi <= num);
+    fibs = fibs.filter(digi => digi%2);
     var answer = fibs.reduce((accu, curVal) => accu + curVal);
     return answer;
 }
   
-var test = sumFibs(14);
+var test = sumFibs(1000);
 console.log(test);
