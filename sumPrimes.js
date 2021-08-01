@@ -1,22 +1,21 @@
 function sumPrimes(num) {
-    var primeArray = [1, 2];
-
-    function isPrime(n) {
-        // if (n < 2) return false;
-        // var q = Math.floor(Math.sqrt(n));
-        for(let i = 2; i <= num; i++) {
-            if (n % i === 0) {
+    function isPrime(num) {
+        for(let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
                 return false;
             }
-            primeArray.push(n)
         }
+        return true;
     }
 
-    for(let i = 1; i <= num; i++) {
-        isPrime(i);
+    let sum = 0;
+
+    for(let i = 2; i <= num; i++) {
+        if(isPrime(i))
+            sum += i;
     }
 
-    return primeArray;
+    return sum;
 }
   
 var test = sumPrimes(10);
