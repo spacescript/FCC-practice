@@ -1,8 +1,4 @@
 function truthCheck(collection, pre) {
-    var counter = 0;
-
-    for()
-
     return pre;
 }
   
