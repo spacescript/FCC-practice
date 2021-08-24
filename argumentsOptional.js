@@ -1,5 +1,5 @@
 function addTogether() {
-    return false;
+    if(arguments == );
 }
   
 var test = addTogether(2,3);
