@@ -5,7 +5,14 @@ function addTogether() {
     //     }
     // }
     // return "Fail";
-    return Number.isNaN(arguments[1]);
+    
+
+    const [first, second] = arguments;
+    if(typeof(first) !== "number") {
+        
+    }
+
+    return isNaN(arguments[1]);
 }
   
 var test = addTogether("2",3);
