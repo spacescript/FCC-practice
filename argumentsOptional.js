@@ -9,11 +9,11 @@ function addTogether() {
 
     const [first, second] = arguments;
     if(typeof(first) !== "number") {
-        
+        if(typeof(second) == "number")
     }
 
-    return isNaN(arguments[1]);
+    return "Nothing";
 }
   
-var test = addTogether("2",3);
+var test = addTogether(2,3);
 console.log(test);
