@@ -9,7 +9,11 @@ function addTogether() {
 
     const [first, second] = arguments;
     if(typeof(first) !== "number") {
-        if(typeof(second) == "number")
+        if(typeof(second) !== "number") {
+            return undefined;
+        } else {
+            
+        }
     }
 
     return "Nothing";
