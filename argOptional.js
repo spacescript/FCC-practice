@@ -9,24 +9,25 @@ function addTogether() {
 
     const [first, second] = arguments;
     if(typeof(first) !== "number") {
-        if(typeof(second) !== "number") {
             return undefined;
-        } else if (second === undefined) {
-            function addSecond(second) {
-                
-            }
-        }
-    } else {
-        if(typeof(second) !== "number") {
-            var sumFirst = addTogether(first);
-            return sumFirst(second);
-        } else {
-            return first + second;
-        }
     }
-
-    return "Nothing";
+    else if (second === undefined) {
+      function addSecond(second) {
+        if (typeof(second) !== "number") {
+          return undefined;
+        } 
+        else {
+          return first + second;
+        }
+      }
+      return addSecond;
+    } 
+      else if (typeof(second) !== "number"){
+          return undefined;
+      } else {
+          return first + second;
+      }
 }
   
-var test = addTogether(2,"3");
+var test = addTogether(2,3);
 console.log(test);
