@@ -12,12 +12,20 @@ function addTogether() {
         if(typeof(second) !== "number") {
             return undefined;
         } else {
-            
+            var sumFirst = addTogether(first);
+            return sumFirst(second);
+        }
+    } else {
+        if(typeof(second) !== "number") {
+            var sumFirst = addTogether(first);
+            return sumFirst(second);
+        } else {
+            return first + second;
         }
     }
 
     return "Nothing";
 }
   
-var test = addTogether(2,3);
+var test = addTogether(2,"3");
 console.log(test);
