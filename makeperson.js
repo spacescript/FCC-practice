@@ -8,4 +8,5 @@ var Person = function(firstAndLast) {
 };
   
 var bob = new Person('Bob Ross');
-return bob.getFullName();
+var test = bob.getFullName();
+console.log(test);
