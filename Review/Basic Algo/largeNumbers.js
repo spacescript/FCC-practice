@@ -4,7 +4,10 @@ function largestOfFour(arr) {
     //     answer.push(Math.max(arr[i]));
     // }
     // return answer;
-    return arr[0][2];
+    // return Math.max(arr[0].flat());
+    // return arr[0].flat();
+    // return typeof(arr[0].flat()[0]);
+    return arr[0].flat()[0];
 }
   
 const test = largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
