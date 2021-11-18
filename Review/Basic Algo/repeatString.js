@@ -1,5 +1,11 @@
 function repeatStringNumTimes(str, num) {
-    return str;
+    var answer = "";
+    while(num > 0) {
+        answer += str;
+        num--;
+    }
+    return answer;
 }
   
-repeatStringNumTimes("abc", 3);
+const test = repeatStringNumTimes("abc", 3);
+console.log(test);
