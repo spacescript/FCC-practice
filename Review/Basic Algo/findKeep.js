@@ -6,6 +6,8 @@ function findElement(arr, func) {
         };
     }
     return undefined;
+
+    // return arr.filter(func)[0];
 }
   
 const test = findElement([1, 2, 3, 4], num => num % 2 === 0);
