@@ -1,5 +1,5 @@
 function booWho(bool) {
-    return typeof(bool) === Boolean == true ? true : false;
+    return typeof bool === "boolean";
 }
   
 const test = booWho(null);
