@@ -1,5 +1,6 @@
 function booWho(bool) {
-    return bool;
+    return typeof(bool) === Boolean == true ? true : false;
 }
   
-booWho(null);
+const test = booWho(null);
+console.log(test);
