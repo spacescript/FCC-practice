@@ -1,5 +1,11 @@
 function titleCase(str) {
-    return str;
-  }
+    let words = str.split(" ");
+    for(let i = 0; i < words.length; i++) {
+        words[i].toLowerCase();
+        words[i].replace()
+    }
+    return words[i];
+}
   
-  titleCase("I'm a little tea pot");
+const test = titleCase("I'm a little tea pot");
+console.log(test);
