@@ -1,10 +1,9 @@
 function titleCase(str) {
-    let words = str.split(" ");
-    for(let i = 0; i < words.length; i++) {
-        words[i].toLowerCase();
-        words[i].replace()
-    }
-    return words[i];
+    var words = str.toLowerCase().split(" ");
+    var cased = words.map(function(word){
+        return word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+    })
+    return cased.join(" ");
 }
   
 const test = titleCase("I'm a little tea pot");
