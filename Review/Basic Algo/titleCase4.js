@@ -1,5 +1,6 @@
 function titleCase(str) {
-    return str.toLowerCase().replace(/\/, W => W.toUpperCase());
+    return str.toLowerCase().replace(/(^|\s)\S/g, W => W.toUpperCase());
 }
   
-titleCase("I'm a little tea pot");
+const test = titleCase("I'm a little tea pot");
+console.log(test);
