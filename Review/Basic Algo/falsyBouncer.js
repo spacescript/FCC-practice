@@ -1,10 +1,11 @@
 function bouncer(arr) {
-    return arr.map(function(x) {
+    var answer = [];
+    arr.map(function(x) {
         if (Boolean(x) == true) {
-            return "This is true!";
+            answer.push(x);
         }
-        return "This is false!";
     })
+    return answer;
 }
   
 const test = bouncer([7, "ate", "", false, 9]);
