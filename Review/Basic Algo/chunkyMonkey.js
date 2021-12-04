@@ -3,10 +3,12 @@ function chunkArrayInGroups(arr, size) {
     // answer.push(arr.slice(size));
     // answer.unshift(arr);
     // return answer;
-    answer.unshift(arr.slice(size));
-    if(arr.length != 0) {
-        return chunkArrayInGroups(arr);
-        
+        answer.unshift(arr.splice(size));
+    
+    if(arr.length <= size) {
+        answer.unshift(arr);
+    } else if (arr.length > size) {
+        answer.unshift(arr.splice(size));
     }
     return answer;
 }
