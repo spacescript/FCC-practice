@@ -9,5 +9,6 @@ let funModule = (function() {
             obj.sing = function() {
               console.log("Singing to an awesome tune");
             };
+        }
     }
 })();
