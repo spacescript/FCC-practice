@@ -2,23 +2,23 @@
 const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 
 // Change code below this line
-function add (list, bookName) {
-    var newList = [...list];
-    newList.push(bookName);
-    return newList;
+function add (bookName) {
+
+  bookList.push(bookName);
+  return bookList;
   
-    // Change code above this line
+  // Change code above this line
 }
 
 // Change code below this line
-function remove (list, bookName) {
-    var newList2 = [...list];
-    if (newList2.indexOf(bookName) >= 0) {
+function remove (bookName) {
+  const book_index = bookList.indexOf(bookName);
+  if (book_index >= 0) {
 
-        newList2.splice(newList2.indexOf(bookName), 1);
-        return newList2;
+    bookList.splice(book_index, 1);
+    return bookList;
 
-        // Change code above this line
+    // Change code above this line
     }
 }
 
