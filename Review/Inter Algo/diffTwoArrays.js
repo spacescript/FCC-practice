@@ -1,10 +1,16 @@
 function diffArray(arr1, arr2) {
+    const newArr = [];
     for(let i = 0; i < arr1.length; i++) {
         for(let j = 0; j < arr2.length; i++) {
-            if(indexOf(arr1[i]) )
+            if(arr1[i] !== arr2[j] && j == (arr2.length - 1)) {
+                newArr.push(arr1[i]);
+            }
+            if(arr2[j] !== arr1[i] && i == (arr1.length - 1)) {
+                newArr.push(arr2[j]);
+            }
         }
     }
-    const newArr = [];
+    // if((indexOf(arr1[i])) !== (indexOf(arr2[j])))
     return newArr;
 }
   
