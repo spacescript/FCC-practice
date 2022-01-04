@@ -1,9 +1,7 @@
 function spinalCase(str) {
-    return str
-        .split("")
-
-        
-
+    var regex = /\s+|_+/g;
+    str = str.replace(/([a-z])([A-Z])/g, "$1 $2"); 
+    return str.replace(regex, "-").toLowerCase();
 }
   
 const test = spinalCase('thisIsSpinalTap');
