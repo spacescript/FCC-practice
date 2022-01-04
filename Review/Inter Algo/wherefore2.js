@@ -1,13 +1,16 @@
 function whatIsInAName(collection, source) {
     // const arr = [];
     // Only change code below this line
-    // return Object.keys(collection).filter(function(key) {
-    //     collection[key] == source;
-    // });
-    return Object.keys(collection);
+    var srcKeys = Object.keys(source);
+
+    return collection.filter(function(obj) {
+        return srcKeys.every(function(key) {
+            return obj.hasOwnProperty(key) && obj[key] === source[key];
+        });
+    });
     
     // Only change code above this line
-    // return arr;
+    // return srcKeys;
 }
   
 const test = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
