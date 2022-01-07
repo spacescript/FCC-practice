@@ -2,14 +2,13 @@ function myReplace(str, before, after) {
     var splitStr = str.split(" ");
     var findBefore = splitStr.indexOf(before);
     str.replace(before, after);
-    var newAfter = after.split("");
-    // var
-    // var newBefore = before.split("");
+    var newAfter;
     if(before.charCodeAt(0) >= 65 && before.charCodeAt(0) <= 90) {
-        newAfter[0].toUpperCase();
+        newAfter = after.charAt(0).toUpperCase() + after.slice(1);
     } else {
-        newAfter[0].toLowerCase();
+        newAfter= after.charAt(0).toLowerCase() + after.slice(1);
     }
+    // return newAfter.join('');
     return str.replace(before, newAfter);
 }
   
