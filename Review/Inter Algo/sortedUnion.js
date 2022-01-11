@@ -1,20 +1,14 @@
 function uniteUnique(arr) {
-    var fullList = [];
-    for(let i = 0; i < arguments.length; i++) {
-        fullList.push(...arguments[i]);
-    };
-
-    var answer;
-
-    fullList.forEach(function(v, i, a) {
-        let counter = 1;
-        if(a[i] === v) {
-            return answer.push(counter += 1);
+    var args = [...arguments];
+    var answer = [];
+    for(let i = 0; i < args.length; i++) {
+        for(let j = 0; j < args[i].length; j++) {
+            if(!answer.includes(args[i][j])) {
+                answer.push(args[i][j]);
+            }
         }
-    });
-
-    // return Object.getOwnPropertyNames(arr);
-    // return fullList;
+    }
+    return answer;
 }
   
 const test = uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
