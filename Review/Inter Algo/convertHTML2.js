@@ -1,16 +1,16 @@
 function convertHTML(str) {
-    var htmlRegex = /([\&\<\>\"\'])/g;
+    var htmlRegex = /([&<>\"'])/g;
 
     const htmlEntities = {
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
-        '"': "&quote;",
+        '"': "&quot;",
         "'": "&apos;",
     }
 
     return str.replace(htmlRegex, match => htmlEntities[match]);
 }
   
-const test = convertHTML("Dolce & Gabbana");
+const test = convertHTML('Stuff in "quotation marks"');
 console.log(test);
