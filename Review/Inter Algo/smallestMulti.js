@@ -10,7 +10,7 @@ function smallestCommons(arr) {
         var set = [];
         x.sort((a, b) => a - b);
         for(let i = x[0]; i <= x[1]; i ++) {
-            set.unshift(i);
+            set.push(i);
         }
         return set;
     }
@@ -18,13 +18,28 @@ function smallestCommons(arr) {
 
     var multiple = pool.reduce((a, b) => a * b);
 
-    function recursingDivide(pool, multiple) {
-        if((pool.every(x => multiple % x == 0)) === true) {
-            return multiple = (multiple / pool[0]);
-        }
-        // recursingDivide(pool, multiple);
-        return multiple;
+    var quotients = [];
+    for(let i = 0; i < pool.length; i++) {
+        quotients.push(multiple / pool[i]);
     }
+
+    var smallMul = function sorter(value) {
+        var mySet = [];
+        if(pool.every(x => value % x == 0)) {
+            mySet.push(value);
+        }
+        return mySet;
+    }
+
+    return quotients.filter(smallMul);
+
+    // function recursingDivide(pool, multiple) {
+    //     if((pool.every(x => multiple % x == 0)) === true) {
+    //         return multiple = (multiple / pool[0]);
+    //     }
+    //     // recursingDivide(pool, multiple);
+    //     return multiple;
+    // }
 
     // recursingDivide(pool, multiple);
 
@@ -42,9 +57,9 @@ function smallestCommons(arr) {
     //     a[i] = 
     // });
 
-    return multiple / pool[0];
+    // return multiple / pool[1];
     // return pool.every(x => multiple % x == 0);
-    // return pool[0];
+    // return quotients;
 }
   
 const test = smallestCommons([1,5]);
