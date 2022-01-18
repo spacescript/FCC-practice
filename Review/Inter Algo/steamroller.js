@@ -9,11 +9,11 @@ function steamrollArray(arr) {
         }
     }
 
-    var reset = function choice() {
-        if (newArr.length >= arr.length) {
-            return newArr;
-        }
-    }
+    // var reset = function choice() {
+    //     if (newArr.length >= arr.length) {
+    //         return newArr;
+    //     }
+    // }
     return newArr;
     // arr.splice(0,1);
     // return arr;
