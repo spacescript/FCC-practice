@@ -9,7 +9,7 @@ function truthCheck(collection, pre) {
     //         return collection.every()
     //     }
     // };
-    return collection.every(item => item.hasOwnProperty(pre)) && collection.every(item => item[pre] == true);
+    return collection.every(item => item.hasOwnProperty(pre)) && collection.every(item => Boolean(item[pre]));
     // return collection.every(item => item.hasOwnProperty(pre)) && collection.every(item => item[pre] != false);
     // return collection[2][pre] != false;
 }
