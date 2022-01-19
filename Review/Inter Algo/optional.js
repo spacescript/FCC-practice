@@ -18,7 +18,7 @@ function addTogether() {
         //         return "Here!";
         //     }
         // }
-        if(typeof(first) == "number") {
+        if(typeof(first) === "number") {
             var partial = function continueSum(num) {
                 // return num + first;
                 return "here";
@@ -29,7 +29,7 @@ function addTogether() {
         return partial;
     } else if (arguments.length == 2) {
         var first = arguments[0], second = arguments[1];
-        if (typeof(first) == "number" && typeof(second) == "number") {
+        if (typeof(first) === "number" && typeof(second) === "number") {
             return first + second;
             // return "Here!";
         } else {
