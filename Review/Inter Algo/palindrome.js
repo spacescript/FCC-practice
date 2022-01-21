@@ -1,6 +1,8 @@
 function palindrome(str) {
-    return true;
+    var regex = /\W/g;
+    var mySet = str.replace(regex, '').toLowerCase();
+    return mySet;
 }
   
-const test = palindrome("eye");
+const test = palindrome("A man, a plan, a canal. Panama");
 console.log(test);
