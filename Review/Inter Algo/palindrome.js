@@ -2,16 +2,20 @@ function palindrome(str) {
     var regex = /\W/g;
     var mySet = str.replace(regex, '').toLowerCase();
     var middle = Math.floor(mySet.length / 2);
+    var searcher = [];
 
-    for(let i = 0; i < mySet.length; i++) {
-        for(let j = mySet.length - 1; j > -1; j--) {
-            if(mySet.charCodeAt(i) != mySet.charCodeAt(j)) {return false}
-            // return "Charcode i = " + mySet.charCodeAt(i) + " Charcode j = " + mySet.charCodeAt(j);
-        }
-    }
-    return true;
+    // for(let i = 0; i < middle; i++) {
+    //     for(let j = mySet.length - 1; j >= middle; j--) {
+    //         if(mySet.charCodeAt(i) != mySet.charCodeAt(j)) {searcher.push("False at: " + i + " and " + j)}
+    //         searcher.push(true);
+    //         // return "Charcode i = " + mySet.charCodeAt(i) + " Charcode j = " + mySet.charCodeAt(j);
+    //     }
+    // }
+    // return searcher;
 
-    return middle;
+    // return middle;
+
+    return mySet.length;
 }
   
 const test = palindrome("A man, a plan, a canal. Panama");
