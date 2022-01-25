@@ -13,9 +13,16 @@ function telephoneCheck(str) {
     // mySet.map(x => filterOut(x));
 
     // var filterSet = 
-    return mySet.every(x => filterOut(x));
+    // return mySet.every(x => filterOut(x));
     // return filterSet.every(true);
 
+    var threeDigits = /\d{3}/g
+    var fourDigits = /\d{4}/g
+    
+    // return str.match((threeDigits && fourDigits));
+    // return str.test((threeDigits && fourDigits));
+    // return fourDigits.test(str);
+    return threeDigits.test(str);
 }
   
 const test = telephoneCheck("355 555 5555");
