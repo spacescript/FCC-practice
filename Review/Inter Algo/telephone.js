@@ -19,19 +19,21 @@ function telephoneCheck(str) {
         return false;
     }
 
+
     //Setup function for checking invalid characters
     function filterOut(x) {
         var list = [32, 40, 41, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57];
         if( list.indexOf(x) == -1 ) {return false}
         else {return true};
     }
-
     //Calling function for invalid chars
-    // mySet.map(x => filterOut(x));
+    if(mySet.every(x => filterOut(x)) == false){
+        return false
+    }
 
-    return mySet.some(x => filterOut(x));
-
+    
+    return true
 }
   
-const test = telephoneCheck("(355)!555-5555");
+const test = telephoneCheck("(355)555-5555");
 console.log(test);
