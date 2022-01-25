@@ -16,20 +16,12 @@ function telephoneCheck(str) {
         return false;
     }
 
-    // var typeSet = str
-    //                 .split('')
-    //                 .map(x => parseInt(x));
-    //                 // .map(x => typeof(x));
+    
+    function formatFilter()
 
-
-
-    // typeSet = typeSet.map(x => parseInt(x));
-    // typeSet = typeSet.map(x => typeof(x));
-    // .map(x => typeof(x))
-
-    return numbCounter[0];
+    return mySet;
 
 }
   
-const test = telephoneCheck("(755)555-55557");
+const test = telephoneCheck("(355)555-5555");
 console.log(test);
