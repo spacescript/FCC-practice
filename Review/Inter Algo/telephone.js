@@ -1,7 +1,10 @@
 function telephoneCheck(str) {
+    // Create a set of ascii code
     var mySet = str.split('').map(x => x.charCodeAt(0));
-    var numbCounter = (str.replace(/\D/g, ''));
 
+    // Remove all non-digits for numerical evaluation
+    var numbCounter = (str.replace(/\D/g, ''));
+    // Setup function for testing numerical eval
     function numbFilter(num) {
         if (num.length > 11 || num.length < 10) {
             return false;
@@ -11,17 +14,23 @@ function telephoneCheck(str) {
             return true;
         }
     }
-
+    //Activate numerical eval (will check length for 10, or 11 with a country code that must be 1)
     if (numbFilter(numbCounter) == false) {
         return false;
     }
 
-    
-    function formatFilter()
+    //Setup function for checking invalid characters
+    function filterOut(x) {
+        var list = [32, 40, 41, 45, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+        if( list.indexOf(x) == -1 ) {return false};
+    }
+
+    //Calling function for invalid chars
+    mySet.map(x => filterOut(x));
 
     return mySet;
 
 }
   
-const test = telephoneCheck("(355)555-5555");
+const test = telephoneCheck("(355)555!-5555");
 console.log(test);
