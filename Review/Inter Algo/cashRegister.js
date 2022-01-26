@@ -5,59 +5,45 @@ function checkCashRegister(price, cash, cid) {
 
     function payout(digit) {
         if(digit >= 100) {
-            counters.HundredDollar += 1;
+            counters.HundredDollar -= 1;
             digit -= 100;
             payout(digit);
         } else if (digit >= 20) {
-            counters.TwentyDollar += 1;
+            counters.TwentyDollar -= 1;
             digit -= 20;
             payout(digit);
         } else if (digit >= 10) {
-            counters.TenDollar += 1;
+            counters.TenDollar -= 1;
             digit -= 10;
             payout(digit);
         } else if (digit >= 5) {
-            counters.FiveDollar += 1;
+            counters.FiveDollar -= 1;
             digit -= 5;
             payout(digit);
         } else if (digit >= 1) {
-            counters.Dollar += 1;
+            counters.Dollar -= 1;
             digit -= 1;
             payout(digit);
         } else if (digit >= .25) {
-            counters.Quarter += 1;
+            counters.Quarter -= 1;
             digit -= .25;
             payout(digit);
         } else if (digit >= .10) {
-            counters.Dime += 1;
+            counters.Dime -= 1;
             digit -= .10;
             payout(digit);
         } else if (digit >= .05) {
-            counters.Nickel += 1;
+            counters.Nickel -= 1;
             digit -= .05;
             payout(digit);
         } else if (digit >= .01) {
-            counters.tens += 1;
-            digit -= 10;
-            payout(digit);
-        } else if (digit >= 9) {
-            counters.nines += 1;
-            digit -= 9;
-            payout(digit);
-        } else if (digit >= 5) {
-            counters.fives += 1;
-            digit -= 5;
-            payout(digit);
-        } else if (digit >= 4) {
-            counters.fours += 1;
-            digit -= 4;
-            payout(digit);
-        } else if (digit >= 1) {
-            counters.ones += 1;
-            digit -= 1;
+            counters.tens -= 1;
+            digit -= .01;
             payout(digit);
         }
     }
+
+    payout(changeOwed);
 
     // Notes: Use every() on counters to check if every counter = 0 for the "CLOSED" result. Otherwise, check to see if any of the values are negative. If any of them are, return the "INSUFFICIENT" result. Otherwise, return myCid with altered values.
 
