@@ -75,15 +75,15 @@ function checkCashRegister(price, cash, cid) {
         change.push([cid[difference[i][0]][0] , cidKey[difference[i][0]] * difference[i][1]]);
     }
 
-    // if(counters.every(x => x >= 0) == false) {
-    //     return {status: "INSUFFICIENT_FUNDS", change: []}
-    // } 
+    if(counters.every(x => x >= 0) == false) {
+        return {status: "INSUFFICIENT_FUNDS", change: []}
+    } 
 
-    // if (counters.every(x => x === 0)) {
-    //     return {status: "CLOSED", change: [...change]}
-    // } else {
-    //     return {status: "OPEN", change: [...change]}
-    // }
+    if (counters.every(x => x === 0)) {
+        return {status: "CLOSED", change: [...change]}
+    } else {
+        return {status: "OPEN", change: [...change]}
+    }
 
 
     // Notes: Use every() on counters to check if every counter = 0 for the "CLOSED" result. Otherwise, check to see if any of the values are negative. If any of them are, return the "INSUFFICIENT" result. Otherwise, return myCid with altered values.
